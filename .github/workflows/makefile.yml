@@ -1,0 +1,21 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "thirteen" ]
+  pull_request:
+    branches: [ "thirteen" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: apt install build-essentials -y
+
+    - name: Run build
+      run: bash build.sh
