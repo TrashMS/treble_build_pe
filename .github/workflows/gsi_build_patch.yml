@@ -17,5 +17,8 @@ jobs:
     - name: Install dependencies
       run: sudo apt install build-essential repo -y
 
+    - name: Set up work directory
+      run: cd ..
+
     - name: Run build
-      run: bash build.sh
+      run: bash treble_build_pe/build.sh
