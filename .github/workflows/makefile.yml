@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install dependencies
-      run: sudo apt install build-essential -y
+      run: sudo apt install build-essential repo -y
 
     - name: Run build
       run: bash build.sh
